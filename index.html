@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Thingvellir 3D - Interactive Experience</title>
+    <link rel="icon" type="image/x-icon" href="ahc.ico">
+
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: sans-serif;
+      }
+      canvas {
+        display: block;
+      }
+#instructionsBox {
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    width: 430px;
+    padding: 12px 14px;
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+    border-radius: 9px;
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    line-height: 1em;
+}
+
+#instructionsBox .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;   /* red */
+    margin-bottom: 4px;
+}
+
+#instructionsBox .subtitle {
+    font-size: 8px;
+    color: white;   /* green/blue */
+    margin-bottom: 4px;
+}
+
+#instructionsBox ul.instr {
+    padding-left: 8px;
+    margin: 0;
+}
+
+#instructionsBox ul.instr li {
+    margin-bottom: 4px;
+    list-style: none;
+}
+
+#instructionsBox ul.instr li::before {
+    content: "• ";
+    color: white;   /* bullet colour */
+}
+
+#instructionsBox span {
+    color: white;   /* highlight controls */
+    font-weight: bold;
+}
+
+
+    </style>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+
+<div id="instructionsBox">
+    <div class="title">NARROW BACKROADS (L'ESTRET CAMÍ DINS TEU)</div>
+    <div class="subtitle">Virtual projection and simulated acoustics of an empty ScreenX theater 5.1 system (thks to TREBLE!!)</div>
+<br>
+    <div class="subtitle">(Please wait until the model cine.glb is fully loaded)</div>
+<br>
+    <ul class="instr">
+        <li><span>GO TO ANY SEAT: w a s d</span> or <span>arrows</span> to move. Rotate with the <span>mouse pad</span></li>
+        <li><span>SPACEBAR</span> to PLAY/PAUSE, or <span>1–7</span> jump directly to fragments</li>
+    </ul>
+</div>
+
+
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
